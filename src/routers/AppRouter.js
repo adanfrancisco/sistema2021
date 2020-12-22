@@ -62,7 +62,7 @@ compruebaUsuario()
           <Switch>
             <PublicRoute
               exact
-              path="/"
+              path="/login"
               component={LoginScreen}
               isAuthenticated={user.logged}
             />
