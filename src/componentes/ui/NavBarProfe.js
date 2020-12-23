@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom'
+import { types } from '../../redux/types';
 
 import { ProfeBarData } from "./ProfeBarData";
 
@@ -7,10 +9,39 @@ import { ProfeBarData } from "./ProfeBarData";
 export const NavBarProfe = () => {
 
 
-  return (
-    
-    <div>
-    
+
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const handleLogout = () => {
+      history.replace("/");
+      localStorage.clear();
+      dispatch({type: types.logout,})
+  
+      
+    };
+    const { apellido, nombre } = useSelector((store) => store.user);
+    return (
+      <div>
+        <nav className="navbar navbar-expand-sm  navbar-dark bg-dark">
+          <div className="navbar-brand">
+            <img
+              src="../assets/instibarra.jpeg"
+              alt="ISFDYT 93"
+              className="mx-auto d-block"
+            />
+            <h6 className="text-center">
+              {apellido}, {nombre}
+            </h6>
+          </div>
+          <button
+            className="navbar-brand nav-item nav-link  btn-danger "
+            onClick={handleLogout}
+          >
+            Salir
+          </button>
+        </nav>
+        <div className="p-1 mb-1 bg-primary text-white"></div>
+  
       <ul className="nav">
       { ProfeBarData.map((item, index) => {
             return (
