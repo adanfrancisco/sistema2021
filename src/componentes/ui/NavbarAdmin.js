@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { types } from "../../redux/types";
 import { AdminBarData } from "./AdminBarData";
+import * as MdIcons from 'react-icons/md'
 
 export const NavbarAdmin = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export const NavbarAdmin = () => {
           className="navbar-brand nav-item nav-link  btn-danger "
           onClick={handleLogout}
         >
-          Salir
+         <MdIcons.MdPowerSettingsNew/> Salir
         </button>
       </nav>
       <div className="p-1 mb-1 bg-primary text-white"></div>

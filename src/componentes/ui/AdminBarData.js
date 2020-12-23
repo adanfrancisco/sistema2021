@@ -4,27 +4,27 @@ import * as MdIcons from 'react-icons/md'
 
 export const AdminBarData =[
     {
-        title: 'Perfil',
+        title: 'PERFIL',
         path: '/perfil',
         icon: <MdIcons.MdPerson/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
     {
-        title: 'General',
+        title: 'ENTREGA',
         path: '/auditoria',
         icon: <MdIcons.MdPerson/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
     {
-        title: 'Deudores',
+        title: 'ADEUDA',
         path: '/audicarrera',
         icon: <MdIcons.MdPerson/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
     {
-        title: 'Personal',
+        title: 'LISTADO',
         path: '/personal',
-        icon: <MdIcons.MdSubject/>,
+        icon: <MdIcons.MdFace/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     }
 

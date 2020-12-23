@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom'
 import { types } from '../../redux/types';
-
+import * as MdIcons from 'react-icons/md'
 import { ProfeBarData } from "./ProfeBarData";
 
 
@@ -37,7 +37,7 @@ export const NavBarProfe = () => {
             className="navbar-brand nav-item nav-link  btn-danger "
             onClick={handleLogout}
           >
-            Salir
+          <MdIcons.MdPowerSettingsNew/> Salir
           </button>
         </nav>
         <div className="p-1 mb-1 bg-primary text-white"></div>
@@ -47,7 +47,7 @@ export const NavBarProfe = () => {
             return (
               <li key={index} className={item.cName}>
                 <Link className={item.cName} to={item.path}>
-                   {item.title}
+                   {item.icon}{item.title}
                 </Link>
               </li>
             );
