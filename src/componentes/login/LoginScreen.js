@@ -5,8 +5,7 @@ import { getUsersAction } from "../../redux/pokeUsers";
 export const LoginScreen = () => {
   const [datos, setDatos] = useState(0);
 
-  // const usuario = localStorage.getItem(JSON.parse('usuario'))
-  // console.log(usuario)
+
 
   const handleInputChange = (event) => {
     setDatos({

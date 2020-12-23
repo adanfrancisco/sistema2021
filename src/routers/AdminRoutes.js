@@ -5,6 +5,7 @@ import { Admin } from '../componentes/pages/Admin';
 import { Auditoria } from '../componentes/pages/admin/Auditoria';
 import { NoAdmin } from '../componentes/pages/NoAdmin';
 import { Perfil } from '../componentes/pages/Perfil';
+
 export const AdminRoutes = () => {
     const {legajo} = useSelector(store => store.user)
 
