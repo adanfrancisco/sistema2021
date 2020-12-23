@@ -5,7 +5,7 @@ export const Perfil = () => {
   const store = useSelector((store) => store);
 
   
-  console.log(store);
+  // console.log(store);
 
   return (
     <div>
