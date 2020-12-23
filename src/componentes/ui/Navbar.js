@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { types } from "../../redux/types";
@@ -48,16 +47,17 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="p-1 mb-1 bg-primary text-white"></div>
+      {/* <div className="p-1 mb-1 bg-primary text-white"></div> */}
       <nav className="navbar  navbar-dark bg-dark">
  
-        {legajo ? (
-          <div className="navbar-brand">
+        {legajo ? (<>
+          {/* <div className="navbar-brand"> */}
           <img src="../assets/instibarra.jpeg" alt="ISFDYT 93" />
             <h6 className="text-center" >
               {apellido}, {nombre} ({legajin})
             </h6>
-          </div>
+          {/* </div> */}
+          </>
         ) : (
           ""
         )}
@@ -68,13 +68,13 @@ export const Navbar = () => {
           Salir
         </button>
       </nav>
-      <div className="p-1 mb-1 bg-primary text-white"></div>
+      {/* <div className="p-1 mb-1 bg-primary text-white"></div> */}
         {legajin === "4" ? <NavBarAlumno /> : ""}
         {legajin === "Administrador" ? <NavbarAdmin /> : ""}
         {legajin === "2" ? <NavbarAdmin /> : ""}
         {/* {legajin === "Profesor" ? <NavBarProfeM /> : ""} */}
         {legajin === "Profesor" ? <NavBarProfe /> : ""}
-      <div className="p-1 mb-1 bg-primary text-white"></div>
+      {/* <div className="p-1 mb-1 bg-primary text-white"></div> */}
     </>
   );
 };

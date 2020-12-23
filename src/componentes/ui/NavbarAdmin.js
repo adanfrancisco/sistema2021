@@ -11,7 +11,7 @@ export const NavbarAdmin = () => {
             return (
               <li key={index} className={item.cName}>
                 <Link className={item.cName} to={item.path}>
-                   {item.title}
+                   {item.icon}{item.title}
                 </Link>
               </li>
             );
