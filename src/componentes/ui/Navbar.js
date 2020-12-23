@@ -53,8 +53,7 @@ export const Navbar = () => {
  
         {legajo ? (
           <div className="navbar-brand">
-          <img src="../assets/instibarra.jpeg" alt="ISFDYT 93" 
-          className="mx-auto d-block" />
+          <img src="../assets/instibarra.jpeg" alt="ISFDYT 93" />
             <h6 className="text-center" >
               {apellido}, {nombre} ({legajin})
             </h6>
@@ -63,7 +62,7 @@ export const Navbar = () => {
           ""
         )}
         <button
-          className="navbar-brand nav-item nav-link  btn-danger "
+          className="nav-item   btn-danger "
           onClick={handleLogout}
         >
           Salir
