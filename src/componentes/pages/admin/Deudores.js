@@ -13,7 +13,7 @@ export const Deudores = () => {
   const [anio, setAnio] = useState(0);
   
   const materia = mate.array;
-  console.log(typeof(materia), typeof(mate))
+  // console.log(typeof(materia), typeof(mate))
 
   function yearActual() {
     var f = new Date();

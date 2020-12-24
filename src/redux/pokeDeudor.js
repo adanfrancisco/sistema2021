@@ -27,7 +27,6 @@ const initState = {
 export const deudiReducer = (state = initState, action) => {
   switch (action.type) {
     case types.deudores:
-      // console.log(action.payload)
       if (action.payload === null) {
         return initState;
       } else {
@@ -50,7 +49,6 @@ export const deudoresAction = () => async (dispatch, getState) => {
       type: types.deudores,
       payload: res.data,
     });
-    // console.log(res.data);
   } catch (error) {
     console.log(error);
   }
