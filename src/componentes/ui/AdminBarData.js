@@ -17,7 +17,7 @@ export const AdminBarData =[
     },
     {
         title: 'ADEUDA',
-        path: '/audicarrera',
+        path: '/adeuda',
         icon: <MdIcons.MdPerson/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },

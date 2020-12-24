@@ -4,14 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { auditoriaAction } from "../../../redux/pokeAuditoria";
 
 export const Auditoria = () => {
-  // const Xvar =useContext(VarContext)
 
   const { apellido } = useSelector((store) => store.profe);
-  const dispatch = useDispatch();
   const mate = useSelector((store) => store.auditor);
-  const materia = mate.array;
+
+  const dispatch = useDispatch();
   const [anio, setAnio] = useState(0);
 
+  const materia = mate.array;
+  
+  console.log(materia)
   function yearActual() {
     var f = new Date();
     setAnio(f.getFullYear());

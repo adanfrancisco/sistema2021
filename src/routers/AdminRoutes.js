@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { Admin } from '../componentes/pages/Admin';
 import { Auditoria } from '../componentes/pages/admin/Auditoria';
+import { Deudores } from '../componentes/pages/admin/Deudores';
 import { NoAdmin } from '../componentes/pages/NoAdmin';
 import { Perfil } from '../componentes/pages/Perfil';
 
@@ -23,6 +24,7 @@ export const AdminRoutes = () => {
                     <Route exact path="/admin" component={Admin}/>
                     <Route exact path="/perfil" component={Perfil}/>
                     <Route exact path="/auditoria" component={Auditoria}/>
+                    <Route exact path="/adeuda" component={Deudores}/>
                     
 
                     <Redirect to="/admin" />
