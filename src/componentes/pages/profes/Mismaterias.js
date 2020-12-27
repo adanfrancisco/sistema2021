@@ -83,7 +83,7 @@ export const Mismaterias = () => {
                       )}
                     </td>
                     <td>
-                    {proyecto!==null ? (
+                    {proyecto ? (
                         <>
                         
                           <img
