@@ -10,7 +10,7 @@ export const ProfeBarData =[
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
     {
-        title: 'Analitico',
+        title: 'PROYECTO',
         path: '/mismaterias',
         icon: <MdIcons.MdSubject/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'

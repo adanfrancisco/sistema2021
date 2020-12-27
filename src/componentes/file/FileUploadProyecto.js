@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import * as varss from "../../redux/varss";
 import "./file.css";
 
-export const FileUpload = (props) => {
+export const FileUploadProyecto = (props) => {
   console.log("prop1 - ", props.tipo);
   const { apellido } = useSelector((store) => store.user);
   const [file, setFile] = useState("");
@@ -44,7 +44,7 @@ export const FileUpload = (props) => {
     data.append("file", file);
 
     // let url = varss.uriUpload + "analitico_upload.php";
-    let url = varss.uriUpload + "analitico_upload.php";
+    let url = varss.uriUpload + "aproyecto_upload.php";
 
     axios
       .post(url, data, {
@@ -66,7 +66,7 @@ export const FileUpload = (props) => {
           
           let url =
             varss.uri +
-            "profe_analitico.php?rapida=" +
+            "profe_aproyecto.php?rapida=" +
             props.rapida +
             "&an=" +
             props.anio +
@@ -80,8 +80,8 @@ export const FileUpload = (props) => {
             props.apellido +
             "&ext=" +
             extension;
-
-          fetch(url).then((response) => response.json());
+// console.log(url)
+           fetch(url).then((response) => response.json());
 
           setOk(0);
         } else {

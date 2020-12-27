@@ -4,12 +4,14 @@ import {  authUserReducer } from './pokeUsers'
 import { profeMateReducer } from './pokeProfes'
 import { audiReducer } from './pokeAuditoria'
 import { deudiReducer } from './pokeDeudor'
+import { profeProyectoReducer } from './pokeProyecto'
 
 let rootReducer = combineReducers({
     user: authUserReducer,
     profe: profeMateReducer,
     auditor:audiReducer,
-    deudor: deudiReducer
+    deudor: deudiReducer,
+    proyecto: profeProyectoReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

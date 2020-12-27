@@ -1,0 +1,5 @@
+.table tr td{
+    height: 30px;
+    padding: 10;
+    overflow: hidden;
+  }

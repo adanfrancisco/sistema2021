@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfeMateriaAction } from "../../../redux/pokeProfes";
+import { getProfeProyectoAction } from "../../../redux/pokeProyecto";
 import { FileUpload } from "../../file/FileUpload";
+import { FileUploadProyecto } from "../../file/FileUploadProyecto";
+import './mismaterias.css'
 
 export const Mismaterias = () => {
 
@@ -9,10 +12,13 @@ export const Mismaterias = () => {
   const dispatch = useDispatch();
   const { dni, apellido } = useSelector((store) => store.user);
   const profe = useSelector((store) => store.profe);
+  const {proyecto} = useSelector((store)=> store.proyecto );
 
   useEffect(() => {
     try {
       dispatch(getProfeMateriaAction(dni));
+      dispatch(getProfeProyectoAction(dni));
+      
     } catch (error) {
       console.log(error);
     }
@@ -39,6 +45,9 @@ export const Mismaterias = () => {
                   <th scope="col" className="text-left">
                     ANALITICO
                   </th>
+                  <th scope="col" className="text-left">
+                    PROYECTO
+                  </th>
                 </tr>
               </thead>
 
@@ -46,7 +55,7 @@ export const Mismaterias = () => {
                 {materia.map((mate, index) => (
                   <tr key={mate.id_materia}>
  
-                    <td>{mate.carrera_nombre}</td>
+                    <td><small>{mate.carrera_nombre}</small></td>
                     <td>{mate.materia_nombre}</td>
                     <td>
                       {/* Aqui debo corroborar si existe el archivo en la bd, de se asi, solo muestro el OK */}
@@ -61,8 +70,33 @@ export const Mismaterias = () => {
                           
                         </>
                       ) : (
-                        
+                        //Analitico
                            <FileUpload
+                        rapida={mate.id_rapida}
+                        anio={anio}
+                        carrera={mate.carrera_nombre}
+                        curso={mate.curso}
+                        materia={mate.materia_nombre}
+                        apellido={apellido}
+                      /> 
+                        
+                      )}
+                    </td>
+                    <td>
+                    {proyecto!==null ? (
+                        <>
+                        
+                          <img
+                            src={`../assets/okok.png`}
+                            alt="ok"
+                            height="20"
+                            width="20"
+                          />
+                          
+                        </>
+                      ) : (
+                        //Proyecto
+                           <FileUploadProyecto
                         rapida={mate.id_rapida}
                         anio={anio}
                         carrera={mate.carrera_nombre}
