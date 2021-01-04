@@ -21,7 +21,9 @@ export const LoginScreen = () => {
     try {
       dispatch(getUsersAction(datos.dni));
       // console.log(datos)
-    } catch (e) {}
+    } catch (e) {
+      console.log(e)
+    }
     // console.log("enviando datos..." + datos.dni);
   };
 

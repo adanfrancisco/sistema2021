@@ -125,7 +125,7 @@ export const Mismaterias = () => {
         </div>
       </div>
 
-      <strong>{Object.keys(materia).length}</strong>
+      {/* <strong>{Object.keys(materia).length}</strong> */}
     </>
   );
 };

@@ -43,6 +43,9 @@ export const Auditoria = () => {
                     <th scope="col" className="text-left">
                       Analitico
                     </th>
+                    <th scope="col" className="text-left">
+                      Proyecto
+                    </th>
                   </tr>
                 </thead>
 
@@ -85,6 +88,7 @@ export const Auditoria = () => {
                           />
                         )}
                       </td>
+                      <td>Proyectoo</td>
                     </tr>
                   ))}
                 </tbody>

@@ -1,3 +1,5 @@
 bootstrap axios react-redux redux thunk wouter sweetalert 
 yarn global add serve
 serve -s build
+
+https://github.com/adanfrancisco/crypto-js
