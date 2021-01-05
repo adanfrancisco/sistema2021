@@ -15,12 +15,12 @@ export const AdminBarData =[
         icon: <MdIcons.MdPerson/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
-    {
-        title: 'ADEUDA',
-        path: '/adeuda',
-        icon: <MdIcons.MdPerson/>,
-        cName:'nav-link  btn btn-success btn-sm p-0 m-2'
-    },
+    // {
+    //     title: 'ADEUDA',
+    //     path: '/adeuda',
+    //     icon: <MdIcons.MdPerson/>,
+    //     cName:'nav-link  btn btn-success btn-sm p-0 m-2'
+    // },
     {
         title: 'LISTADO',
         path: '/personal',

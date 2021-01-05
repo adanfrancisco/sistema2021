@@ -13,7 +13,7 @@ export const Auditoria = () => {
 
   const materia = mate.array;
   
-  console.log(materia)
+  // console.log(materia)
   function yearActual() {
     var f = new Date();
     setAnio(f.getFullYear());
@@ -30,7 +30,7 @@ export const Auditoria = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="table-compressed table-responsive">
-              <table className="table users table-hover">
+              <table className="table users table-hover table-dark">
                 <thead className="thead-dark">
                   <tr>
                     {/* <th scope="col">#</th> */}
@@ -63,7 +63,7 @@ export const Auditoria = () => {
 
                         mate.curso
                         }</td> */}
-                      <td>{mate.curso.charAt(0)} {mate.carrera_nombre}</td>
+                      <td>{mate.curso.charAt(0)}{mate.carrera_nombre}</td>
                       <td>{mate.materia_nombre}</td>
                       <td>
                         {mate.apellido}-{mate.dni}
@@ -88,7 +88,25 @@ export const Auditoria = () => {
                           />
                         )}
                       </td>
-                      <td>Proyectoo</td>
+                      <td>{
+                        mate.proyecto?(
+                          <img
+                            src={`../assets/okok.png`}
+                            alt="ok"
+                            height="20"
+                            width="20"
+                          />
+                        ) : (
+                          <FileUpload
+                            rapida={mate.id_rapida}
+                            anio={anio}
+                            carrera={mate.carrera_nombre}
+                            curso={mate.curso}
+                            materia={mate.materia_nombre}
+                            apellido={apellido}
+                          />
+                        )
+                      }</td>
                     </tr>
                   ))}
                 </tbody>

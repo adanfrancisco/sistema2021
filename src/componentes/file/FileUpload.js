@@ -6,7 +6,7 @@ import * as varss from "../../redux/varss";
 import "./file.css";
 
 export const FileUpload = (props) => {
-  console.log("prop1 - ", props.tipo);
+  // console.log("prop1 - ", props.tipo);
   const { apellido } = useSelector((store) => store.user);
   const [file, setFile] = useState("");
   const [filename, setFilename] = useState("");

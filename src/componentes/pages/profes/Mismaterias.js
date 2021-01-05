@@ -11,9 +11,9 @@ export const Mismaterias = () => {
   
   const dispatch = useDispatch();
   const { dni, apellido } = useSelector((store) => store.user);
-  const profe = useSelector((store) => store.profe);
-  const {proyecto} = useSelector((store)=> store.proyecto );
+  const profe = useSelector( (store) => store.profe);
 
+  
   useEffect(() => {
     try {
       dispatch(getProfeMateriaAction(dni));
@@ -23,41 +23,44 @@ export const Mismaterias = () => {
       console.log(error);
     }
   }, [dispatch, dni]);
-
+  
   const materia = profe.array;
 
+  // console.log('mi proyecto:' ,proyecto)
 
   var fecha = new Date();
   var anio = fecha.getFullYear();
 
   return (
     <>
-      <h3>PROYECTO ANALITICO ---{ anio }</h3>
+      <h3>CONTENIDOS -Y- PROYECTO-{ anio }</h3>
       <div className="row">
         <div className="col-md-12">
-          <div className="table-responsive">
-            <table className="table users table-hover">
+          <div className="table-responsive-sm">
+            <table className="table table-striped  table-responsive-sm">
               <thead className="thead-dark">
-                <tr>
+                <tr >
     
-                  <th scope="col-md-auto">Carrera</th>
-                  <th scope="col">Materia</th>
-                  <th scope="col" className="text-left">
-                    ANALITICO
+                  <th><small>CARRERA</small></th>
+                  <th><small>MATERIA</small></th>
+                  <th  className="text-left">
+                    <small>CONTENIDOS <br/>(para alumno)</small>
                   </th>
                   <th scope="col" className="text-left">
-                    PROYECTO
+                    <small>PROYECTO (institucion)</small>
                   </th>
                 </tr>
               </thead>
 
               <tbody>
                 {materia.map((mate, index) => (
-                  <tr key={mate.id_materia}>
+                  <tr key={mate.id_materia} >
  
-                    <td><small>{mate.carrera_nombre}</small></td>
-                    <td>{mate.materia_nombre}</td>
-                    <td>
+                    <td  ><small>{
+                      (mate.carrera_nombre).toString().slice(0,9)
+                      }</small></td>
+                    <td><small>{mate.materia_nombre}</small></td>
+                    <td><center>
                       {/* Aqui debo corroborar si existe el archivo en la bd, de se asi, solo muestro el OK */}
                       {mate.rapidita ? (
                         <>
@@ -72,6 +75,7 @@ export const Mismaterias = () => {
                       ) : (
                         //Analitico
                            <FileUpload
+                        tipo='analitico'
                         rapida={mate.id_rapida}
                         anio={anio}
                         carrera={mate.carrera_nombre}
@@ -81,9 +85,10 @@ export const Mismaterias = () => {
                       /> 
                         
                       )}
+                      </center>
                     </td>
-                    <td>
-                    {proyecto ? (
+                    <td><center>
+                    {mate.proyecto ? (
                         <>
                         
                           <img
@@ -97,6 +102,7 @@ export const Mismaterias = () => {
                       ) : (
                         //Proyecto
                            <FileUploadProyecto
+                           tipo='proyecto'
                         rapida={mate.id_rapida}
                         anio={anio}
                         carrera={mate.carrera_nombre}
@@ -106,13 +112,14 @@ export const Mismaterias = () => {
                       /> 
                         
                       )}
+                      </center>
                     </td>
                   </tr>
                 ))}
               </tbody>
               <tfoot>
                 <tr className="bg-dark">
-                  <td className="text-white" colSpan="4">
+                  <td  className="text-white" colSpan="2">
                     <strong>Total de Materias</strong>
                   </td>
                   <td className="text-right text-white">
