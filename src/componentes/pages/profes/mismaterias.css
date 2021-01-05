@@ -1,6 +1,6 @@
 .table tr td{
     height: 30px;
-    padding: 0;
+    padding: 5;
     overflow: hidden;
   }
   .table th {

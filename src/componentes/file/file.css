@@ -2,7 +2,13 @@
     position: relative;
     display: inline-block;
   }
-
+  .background-red {
+    background-color: red;
+  }
+  
+  .background-blue {
+    background-color: blue;
+  }
   .file-select::before {
     background-color: #e62a1c;
     color: white;

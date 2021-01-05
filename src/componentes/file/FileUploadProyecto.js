@@ -108,6 +108,7 @@ export const FileUploadProyecto = (props) => {
                       type="file"
                       id="customFile"
                       style={{
+                        backgroundColor:'background-red',
                         height:'1px',
                         width: "100px",
                       }}
