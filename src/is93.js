@@ -7,10 +7,9 @@ import { Redirect } from 'react-router-dom'
 
 
 export const Is93 = () => {
-<Redirect to="/" />
+    <Redirect to="/" />
     return (
         <div>
-        
             <AppRouter />
         </div>
     )

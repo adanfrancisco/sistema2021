@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { FileUpload } from "../../file/FileUpload";
+import React, { useEffect } from "react";
+// import { FileUpload } from "../../file/FileUpload";
 import { useDispatch, useSelector } from "react-redux";
 import { auditoriaAction } from "../../../redux/pokeAuditoria";
 
 export const Auditoria = () => {
 
-  const { apellido } = useSelector((store) => store.profe);
+  // const { apellido } = useSelector((store) => store.profe);
   const mate = useSelector((store) => store.auditor);
 
   const dispatch = useDispatch();
-  const [anio, setAnio] = useState(0);
+  // const [anio, setAnio] = useState(0);
 
   const materia = mate.array;
   
   // console.log(materia)
-  function yearActual() {
-    var f = new Date();
-    setAnio(f.getFullYear());
-  }
+  // function yearActual() {
+  //   var f = new Date();
+  //   // setAnio(f.getFullYear());
+  // }
   useEffect(() => {
     dispatch(auditoriaAction());
-    yearActual();
+    // yearActual();
   }, [dispatch]);
 
   return (
@@ -78,13 +78,11 @@ export const Auditoria = () => {
                             width="20"
                           />
                         ) : (
-                          <FileUpload
-                            rapida={mate.id_rapida}
-                            anio={anio}
-                            carrera={mate.carrera_nombre}
-                            curso={mate.curso}
-                            materia={mate.materia_nombre}
-                            apellido={apellido}
+                          <img
+                            src={`../assets/equis.png`}
+                            alt="ok"
+                            height="20"
+                            width="20"
                           />
                         )}
                       </td>
@@ -97,13 +95,11 @@ export const Auditoria = () => {
                             width="20"
                           />
                         ) : (
-                          <FileUpload
-                            rapida={mate.id_rapida}
-                            anio={anio}
-                            carrera={mate.carrera_nombre}
-                            curso={mate.curso}
-                            materia={mate.materia_nombre}
-                            apellido={apellido}
+                          <img
+                            src={`../assets/equis.png`}
+                            alt="ok"
+                            height="20"
+                            width="20"
                           />
                         )
                       }</td>
@@ -112,7 +108,7 @@ export const Auditoria = () => {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td colSpan="4">
+                    <td colSpan="3">
                       <strong>Total de Materias</strong>
                     </td>
                     <td className="text-right thead-dark">

@@ -23,6 +23,7 @@
     "sweetalert": "^2.1.2",
     "thunk": "0.0.1"
   },
+  "homepage": "http://is93.aloeadan.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

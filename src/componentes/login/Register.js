@@ -53,7 +53,13 @@ export const LoginScreen = () => {
           >
             Entrar
           </button>
-
+        <button
+            type="submit"
+            className="btn btn-secondary btn-block btn-large"
+            onClick={enviarDatos}
+          >
+            Registrarme como Alumno
+          </button>
         </form>
       </div>
   );
