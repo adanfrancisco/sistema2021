@@ -13,7 +13,7 @@ export const Perfil = () => {
       <br />
       Nombre:{store.user.nombre}
       <br />
-      El correo registrado con nosotros es: {store.user.email}
+      El correo registrado con nosotros es: <b>{store.user.email}</b> 
       <br />
       <div>
         
