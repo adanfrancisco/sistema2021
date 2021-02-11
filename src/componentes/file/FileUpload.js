@@ -13,7 +13,9 @@ export const FileUpload = (props) => {
   const [extension, setExtension] = useState("");
   const [ok, setOk] = useState(1);
   const [desactiva, setDesactiva] = useState(false);
-
+  const [cargado, setCargado] = useState('')
+  // const currentProgress = useAxiosProgressBar();
+  
 
   const onChange = (e) => {
     let extenxion = e.target.files[0].name.slice(
@@ -36,6 +38,7 @@ export const FileUpload = (props) => {
 
     console.log(extenxion);
   };
+  
 
   function handleEnviar(e) {
     e.preventDefault();
@@ -45,9 +48,23 @@ export const FileUpload = (props) => {
 
     // let url = varss.uriUpload + "analitico_upload.php";
     let url = varss.uriUpload + "analitico_upload.php";
+    const options = {
+      onUploadProgress: (progressEvent) => {
+        const {loaded, total} = progressEvent;
+        let percent = Math.floor( (loaded * 100) / total )
+        // console.log( `${loaded}kb of ${total}kb | ${percent}%` );
+        setCargado( `${percent}%` );
 
-    axios
-      .post(url, data, {
+        // if( percent < 100 ){
+        //   this.setState({ uploadPercentage: percent })
+        // }
+      }
+    }
+
+  axios
+      .post(url, data, options,
+        {
+     
         params: {
           ra: props.rapida,
           an: props.anio,
@@ -57,6 +74,7 @@ export const FileUpload = (props) => {
           ape: apellido,
         },
       })
+      
       .then((res) => {
         console.warn(res);
         if (res.status === 200) {
@@ -92,7 +110,10 @@ export const FileUpload = (props) => {
         console.log(err);
         swal("No se pudo almacenar!, quiza no tienes internet..");
       });
+      
   }
+
+
 
   return (
     <>
@@ -123,7 +144,10 @@ export const FileUpload = (props) => {
                       className="btn btn-primary btn-right"
                       disabled={desactiva}
                     >
-                      {!desactiva ? "Enviar" : <>Espere..</>}
+                      {!desactiva ? "Enviar" : 
+                      <>
+                      Carga..{cargado}
+                      </>}
                     </button>
                   ) : (
                     <>
