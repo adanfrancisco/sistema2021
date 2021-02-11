@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUsersAction } from "../../redux/pokeUsers";
 
-export const LoginScreen = () => {
+export const RegisterScreen = () => {
   const [datos, setDatos] = useState(0);
 
 

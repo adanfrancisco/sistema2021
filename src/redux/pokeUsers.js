@@ -53,14 +53,10 @@ export const getUsersAction = (dni) => async (dispatch, getState) => {
     });
 
   }else{
-
-
-
-
   
   const uri = varss.uri
   try {
-    const res = await Axios.get(uri + `busca_profe.php?id=${dni}`);
+    const res = await Axios.get(uri + `busca_profe.php?id=${dni}`)
   
   
     var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(res.data[0]).toString(), 'adanAloe99');
@@ -69,12 +65,6 @@ export const getUsersAction = (dni) => async (dispatch, getState) => {
     // var bytes  = CryptoJS.AES.decrypt(ciphertext.toString(), 'adanAloe99');
     // var plaintext = bytes.toString(CryptoJS.enc.Utf8);
     // // console.log("Texto Desencriptado ", plaintext);
-  
-  
-
-
-
-  
   
     // console.log('los datos son: ',res.data)
     if (res.data.dni==='11222333'){

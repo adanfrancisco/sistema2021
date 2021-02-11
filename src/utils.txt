@@ -3,3 +3,27 @@ yarn global add serve
 serve -s build
 
 https://github.com/adanfrancisco/crypto-js
+
+
+import { Switch, Route, Redirect } from 'react-router-dom'
+
+function PrivateRoute({path, component, ...rest}){
+//se puede hacer con redux tambien
+let storage = localStorage.getItem('storage')
+storage = JSON.parse(storage)
+
+    if (storage && storage.user) {
+        return <Route path={path} component ={component} {...rest}/>
+    }else{
+        return <Redirect to ="/login" {...rest} />
+    }
+}
+export default function Routes() {
+    return (
+        <Switch>
+            <PrivateRoute exact path="/" component={Home} />
+            <PrivateRoute path="/favs" component={FavPage} />
+            <Route path="/login" component={LoginPage} />
+        </Switch>
+    )
+}
