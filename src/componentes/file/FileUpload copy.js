@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import * as varss from "../../redux/varss";
 import "./file.css";
 
-export const FileUploadProyecto = (props) => {
+export const FileUpload = (props) => {
   // console.log("prop1 - ", props.tipo);
   const { apellido } = useSelector((store) => store.user);
   const [file, setFile] = useState("");
@@ -13,7 +13,7 @@ export const FileUploadProyecto = (props) => {
   const [extension, setExtension] = useState("");
   const [ok, setOk] = useState(1);
   const [desactiva, setDesactiva] = useState(false);
-  const [cargado, setCargado] = useState('')
+
 
   const onChange = (e) => {
     let extenxion = e.target.files[0].name.slice(
@@ -44,23 +44,10 @@ export const FileUploadProyecto = (props) => {
     data.append("file", file);
 
     // let url = varss.uriUpload + "analitico_upload.php";
-    let url = varss.uriUpload + "aproyecto_upload.php";
-
-    const options = {
-      onUploadProgress: (progressEvent) => {
-        const {loaded, total} = progressEvent;
-        let percent = Math.floor( (loaded * 100) / total )
-        // console.log( `${loaded}kb of ${total}kb | ${percent}%` );
-        setCargado( `${percent}%` );
-
-        // if( percent < 100 ){
-        //   this.setState({ uploadPercentage: percent })
-        // }
-      }
-    }
+    let url = varss.uriUpload + "analitico_upload.php";
 
     axios
-      .post(url, data, options,{
+      .post(url, data, {
         params: {
           ra: props.rapida,
           an: props.anio,
@@ -79,7 +66,7 @@ export const FileUploadProyecto = (props) => {
           
           let url =
             varss.uri +
-            "profe_aproyecto.php?rapida=" +
+            "profe_analitico.php?rapida=" +
             props.rapida +
             "&an=" +
             props.anio +
@@ -93,8 +80,8 @@ export const FileUploadProyecto = (props) => {
             props.apellido +
             "&ext=" +
             extension;
-// console.log(url)
-           fetch(url).then((response) => response.json());
+
+          fetch(url).then((response) => response.json());
 
           setOk(0);
         } else {
@@ -106,6 +93,8 @@ export const FileUploadProyecto = (props) => {
         swal("No se pudo almacenar!, quiza no tienes internet..");
       });
   }
+
+  
 
   return (
     <>
@@ -136,9 +125,7 @@ export const FileUploadProyecto = (props) => {
                       className="btn btn-primary btn-right"
                       disabled={desactiva}
                     >
-                      {!desactiva ? "Enviar" : <>
-                      Carga..{cargado}
-                      </>}
+                      {!desactiva ? "Enviar" : <>Espere..</>}
                     </button>
                   ) : (
                     <>
