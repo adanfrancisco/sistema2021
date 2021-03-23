@@ -122,7 +122,7 @@ export const FileUploadProyecto = (props) => {
                       id="customFile"
                       style={{
                         backgroundColor:'background-red',
-                        height:'1px',
+                        height:'20px',
                         width: "100px",
                       }}
                       onChange={onChange}

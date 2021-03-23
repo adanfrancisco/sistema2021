@@ -12,11 +12,11 @@ export const FileUpload = (props) => {
   const [filename, setFilename] = useState("");
   const [extension, setExtension] = useState("");
   const [ok, setOk] = useState(1);
-  const [desactiva, setDesactiva] = useState(false);
+  const [desactiva, setDesactiva] = useState(false)
   const [cargado, setCargado] = useState('')
   // const currentProgress = useAxiosProgressBar();
   
-
+console.log(desactiva)
   const onChange = (e) => {
     let extenxion = e.target.files[0].name.slice(
       ((e.target.files[0].name.lastIndexOf(".") - 1) >>> 0) + 2
@@ -130,7 +130,7 @@ export const FileUpload = (props) => {
                       id="customFile"
                       style={{
                         backgroundColor:'background-red',
-                        height:'1px',
+                        height:'20px',
                         width: "100px",
                       }}
                       onChange={onChange}
@@ -142,7 +142,7 @@ export const FileUpload = (props) => {
                   {ok ? (
                     <button
                       className="btn btn-primary btn-right"
-                      disabled={desactiva}
+                      // disabled={desactiva}
                     >
                       {!desactiva ? "Enviar" : 
                       <>
