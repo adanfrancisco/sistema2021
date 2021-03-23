@@ -134,9 +134,12 @@ export const FileUploadProyecto = (props) => {
                   {ok ? (
                     <button
                       className="btn btn-primary btn-right"
-                      
+                      disabled={desactiva}
                     >
-                      "Enviar"
+                       {!desactiva ? "Enviar" : 
+                      <>
+                      Carga..{cargado}
+                      </>}
                     </button>
                   ) : (
                     <>
