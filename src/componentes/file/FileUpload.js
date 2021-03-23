@@ -12,7 +12,7 @@ export const FileUpload = (props) => {
   const [filename, setFilename] = useState("");
   const [extension, setExtension] = useState("");
   const [ok, setOk] = useState(1);
-  const [desactiva, setDesactiva] = useState(false);
+  const [desactiva, setDesactiva] = useState(true);
   const [cargado, setCargado] = useState('')
   // const currentProgress = useAxiosProgressBar();
   
