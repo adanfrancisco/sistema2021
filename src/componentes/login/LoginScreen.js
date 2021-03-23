@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUsersAction } from "../../redux/pokeUsers";
-
+import './login.css';
 export const LoginScreen = () => {
   const [datos, setDatos] = useState(0);
 
@@ -34,13 +34,14 @@ export const LoginScreen = () => {
       
         <form className="form border p-3 form mx-auto d-block">
           <div className="form-group">
+            
             <input
               type="number"
               
               name="dni"
               className="form-control"
               id="dni"
-              placeholder="codigo numerico"
+              placeholder="ingrese DNI"
               autoComplete="off"
               onChange={handleInputChange}
             />
@@ -50,6 +51,7 @@ export const LoginScreen = () => {
             type="submit"
             className="btn btn-primary btn-block btn-large"
             onClick={enviarDatos}
+            
           >
             Entrar
           </button>
