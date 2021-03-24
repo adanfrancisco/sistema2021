@@ -60,7 +60,7 @@ export const FileUploadProyecto = (props) => {
     }
 
     axios
-      .post(url, data, options,{
+     .post(url, data, {options,
         params: {
           ra: props.rapida,
           an: props.anio,

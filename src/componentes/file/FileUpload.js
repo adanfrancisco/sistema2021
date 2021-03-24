@@ -61,19 +61,17 @@ console.log(desactiva)
       }
     }
 
-  axios
-      .post(url, data, options,
-        {
-     
-        params: {
-          ra: props.rapida,
-          an: props.anio,
-          ca: props.carrera,
-          cu: props.curso,
-          mat: props.materia,
-          ape: apellido,
-        },
-      })
+    axios
+    .post(url, data, {options,
+       params: {
+         ra: props.rapida,
+         an: props.anio,
+         ca: props.carrera,
+         cu: props.curso,
+         mat: props.materia,
+         ape: apellido,
+       },
+     })
       
       .then((res) => {
         console.warn(res);
@@ -98,7 +96,7 @@ console.log(desactiva)
             props.apellido +
             "&ext=" +
             extension;
-
+// console.log(url)
           fetch(url).then((response) => response.json());
 
           setOk(0);
