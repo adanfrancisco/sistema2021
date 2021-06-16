@@ -5,7 +5,7 @@ import { getProfeInformeAction } from "../../../redux/pokeInforme";
 import { getProfeProyectoAction } from "../../../redux/pokeProyecto";
 
 import { FileUpload1Informe } from "../../file/FileUpload1Informe";
-import { FileUpload2Informe } from "../../file/FileUpload2Informe";
+// import { FileUpload2Informe } from "../../file/FileUpload2Informe";
 
 import './mismaterias.css'
 
