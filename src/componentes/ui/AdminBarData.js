@@ -10,20 +10,14 @@ export const AdminBarData =[
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
     {
-        title: 'ENTREGA',
+        title: 'PROYECTOS',
         path: '/auditoria',
         icon: <MdIcons.MdPerson/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
-    // {
-    //     title: 'ADEUDA',
-    //     path: '/adeuda',
-    //     icon: <MdIcons.MdPerson/>,
-    //     cName:'nav-link  btn btn-success btn-sm p-0 m-2'
-    // },
     {
-        title: 'LISTADO',
-        path: '/personal',
+        title: 'INFORMES',
+        path: '/informe',
         icon: <MdIcons.MdFace/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     }

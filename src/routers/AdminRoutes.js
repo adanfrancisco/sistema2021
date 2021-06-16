@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
+
+import { Perfil } from '../componentes/pages/Perfil';
 import { Admin } from '../componentes/pages/Admin';
 import { Auditoria } from '../componentes/pages/admin/Auditoria';
-import { Deudores } from '../componentes/pages/admin/Deudores';
+import { Informe } from '../componentes/pages/admin/Informe';
+
 import { NoAdmin } from '../componentes/pages/NoAdmin';
-import { Perfil } from '../componentes/pages/Perfil';
 
 export const AdminRoutes = () => {
     const {legajo} = useSelector(store => store.user)
@@ -24,7 +26,7 @@ export const AdminRoutes = () => {
                     <Route exact path="/admin" component={Admin}/>
                     <Route exact path="/perfil" component={Perfil}/>
                     <Route exact path="/auditoria" component={Auditoria}/>
-                    <Route exact path="/adeuda" component={Deudores}/>
+                    <Route exact path="/informe" component={Informe}/>
                     
 
                     <Redirect to="/admin" />

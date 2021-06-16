@@ -10,13 +10,19 @@ export const ProfeBarData =[
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
     },
     {
-        title: 'PROYECTO',
+        title: 'PROYECTOS',
         path: '/mismaterias',
         icon: <MdIcons.MdSubject/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
 
-    }
+    },
+    {
+        title: 'INFORMES',
+        path: '/informes',
+        icon: <MdIcons.MdSubject/>,
+        cName:'nav-link  btn btn-success btn-sm p-0 m-2'
 
+    }
     
 
 ]
