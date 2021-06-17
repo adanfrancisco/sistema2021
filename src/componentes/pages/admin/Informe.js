@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { FileUpload } from "../../file/FileUpload";
-import {  useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
+import { auditoriaAction } from "../../../redux/pokeAuditoria";
 
 export const Informe = () => {
 
   // const { apellido } = useSelector((store) => store.profe);
   const mate = useSelector((store) => store.auditor);
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const [anio, setAnio] = useState(0);
 
   const materia = mate.array;
@@ -17,10 +18,10 @@ export const Informe = () => {
   //   var f = new Date();
   //   // setAnio(f.getFullYear());
   // }
-  // useEffect(() => {
-  //   dispatch(auditoriaAction());
-  //   // yearActual();
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(auditoriaAction());
+    // yearActual();
+  }, [dispatch]);
 
   return (
     <div>
