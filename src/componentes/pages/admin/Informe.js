@@ -40,10 +40,10 @@ export const Informe = () => {
                     <th scope="col">Materia</th>
                     <th scope="col">Profe</th>
                     <th scope="col" className="text-left">
-                      Analitico
+                      1 INFORME
                     </th>
                     <th scope="col" className="text-left">
-                      Proyecto
+                      2 INFORME
                     </th>
                   </tr>
                 </thead>
