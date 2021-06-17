@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import { FileUpload } from "../../file/FileUpload";
-import { useDispatch, useSelector } from "react-redux";
-import { auditoriaAction } from "../../../redux/pokeAuditoria";
+import {  useSelector } from "react-redux";
 
 export const Informe = () => {
 
@@ -119,8 +118,7 @@ export const Informe = () => {
               </table>
             </div>
           </div>
-        </div>
-      
+        </div>    
     </div>
   );
 };
