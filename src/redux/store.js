@@ -5,8 +5,8 @@ import { profeMateReducer } from './pokeProfes'
 import { audiReducer } from './pokeAuditoria'
 import { deudiReducer } from './pokeDeudor'
 import { profeProyectoReducer } from './pokeProyecto'
-import { profeInformeReducer } from './pokeInforme'
 import { profeMesaReducer } from './pokeMesa'
+import { profeInformeReducer } from './pokeInforme'
 
 let rootReducer = combineReducers({
     user: authUserReducer,

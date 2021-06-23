@@ -20,7 +20,14 @@ export const AdminBarData =[
         path: '/informe',
         icon: <MdIcons.MdFace/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
-    },{
+    },
+    {
+        title: 'MESAS',
+        path: '/mesita',
+        icon: <MdIcons.MdAccessAlarm/>,
+        cName:'nav-link  btn btn-success btn-sm p-0 m-2'
+    },
+    {
         title: 'PROFES',
         path:'/listado',
         icon:<MdIcons.MdAccountBox />,

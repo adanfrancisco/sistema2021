@@ -1,26 +1,22 @@
 import React, { useEffect } from "react";
-// import { FileUpload } from "../../file/FileUpload";
+
 import {  useDispatch, useSelector } from "react-redux";
-import {  auditoriaInformeAction } from "../../../redux/pokeAuditoria";
+import { auditoriaMesaaction } from "../../../redux/pokeAuditoria";
 
-export const Informe = () => {
 
-  // const { apellido } = useSelector((store) => store.profe);
+export const Mesita = () => {
+
+
   const mate = useSelector((store) => store.auditor);
 
   const dispatch = useDispatch();
-  // const [anio, setAnio] = useState(0);
 
   const materia = mate.array;
   
-  // console.log(materia)
-  // function yearActual() {
-  //   var f = new Date();
-  //   // setAnio(f.getFullYear());
-  // }
+ 
   useEffect(() => {
-    dispatch(auditoriaInformeAction());
-    // yearActual();
+    dispatch(auditoriaMesaaction());
+    
   }, [dispatch]);
 
   return (
@@ -40,11 +36,11 @@ export const Informe = () => {
                     <th scope="col">Carrera</th>
                     <th scope="col">Materia</th>
                     <th scope="col">Profe</th>
-                    <th scope="col" className="text-left">
-                      1 INFORME
+                    <th scope="col" className="text-center">
+                      REGULAR
                     </th>
-                    <th scope="col" className="text-left">
-                      2 INFORME
+                    <th scope="col" className="text-center">
+                     LIBRE
                     </th>
                   </tr>
                 </thead>
@@ -70,7 +66,7 @@ export const Informe = () => {
                       </td>
                       <td>
                         {/* Aqui debo corroborar si existe el archivo en la bd, de se asi, solo muestro el OK */}
-                        {mate.inf1 ? (
+                        {mate.regular ? (
                           <img
                             src={`../assets/okok.png`}
                             alt="ok"
@@ -87,7 +83,7 @@ export const Informe = () => {
                         )}
                       </td>
                       <td>{
-                        mate.inf2?(
+                        mate.libre?(
                           <img
                             src={`../assets/okok.png`}
                             alt="ok"
@@ -123,3 +119,5 @@ export const Informe = () => {
     </div>
   );
 };
+
+
