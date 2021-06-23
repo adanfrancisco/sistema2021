@@ -1,27 +1,28 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getProfeInformeAction } from "../../../redux/pokeInforme";
+import { getProfeMesalAction } from "../../../redux/pokeMesa";
 import { getProfeProyectoAction } from "../../../redux/pokeProyecto";
 
-import { FileUpload1Informe } from "../../file/FileUpload1Informe";
-import { FileUpload2Informe } from "../../file/FileUpload2Informe";
+
+import { FileUploadFinalLibre } from "../../file/FileUploadFInalLibre";
+import { FileUploadFinalRegular } from "../../file/FileUploadFInalRegular";
 // import { FileUpload2Informe } from "../../file/FileUpload2Informe";
 
 import './mismaterias.css'
 
-export const PrimerInforme = () => {
+export const Mesa = () => {
 
   
   const dispatch = useDispatch();
   const { dni, apellido } = useSelector((store) => store.user);
-  const informe = useSelector( (store) => store.informe);
+  const mesa = useSelector( (store) => store.mesa);
 
   
   useEffect(() => {
 
     try {
-      dispatch(getProfeInformeAction(dni));
+      dispatch(getProfeMesalAction(dni));
       dispatch(getProfeProyectoAction(dni));
       
     } catch (error) {
@@ -29,7 +30,7 @@ export const PrimerInforme = () => {
     }
   }, [dispatch, dni]);
   
-  const materia = informe.array;
+  const materia = mesa.array;
 
   // console.log('mi proyecto:' ,proyecto)
 
@@ -38,7 +39,7 @@ export const PrimerInforme = () => {
 
   return (
     <>
-      <h3>- INFORMES -{ anio }</h3>
+      <h3>- MESAS -{ anio }</h3>
       <div className="row">
         <div className="col-md-12">
           <div className="table-responsive-sm">
@@ -47,12 +48,12 @@ export const PrimerInforme = () => {
                 <tr >
     
                   <th><small>CARRERA</small></th>
-                  <th><small>MATERIA</small></th>
+                  <th className="text-center"><small>MATERIA</small></th>
                   <th  className="text-center">
-                    <small>1 INFORME </small>
+                    <small>REGULAR </small>
                   </th>
-                  <th  className="text-center">
-                    <small>2 INFORME</small>
+                  <th scope="col" className="text-center">
+                    <small>LIBRE</small>
                   </th>
                 </tr>
               </thead>
@@ -68,7 +69,7 @@ export const PrimerInforme = () => {
                     <td><center>
                       {/* Aqui debo corroborar si existe el archivo en la bd, 
                       de se asi, solo muestro el OK */}
-                      {mate.inf1 ? (
+                      {mate.mesar ? (
                         <>
                           <img
                             src={`../assets/okok.png`}
@@ -80,7 +81,7 @@ export const PrimerInforme = () => {
                         </>
                       ) : (
                         //1 informe
-                           <FileUpload1Informe
+                           <FileUploadFinalRegular
                         tipo='analitico'
                         rapida={mate.id_rapida}
                         anio={anio}
@@ -94,7 +95,7 @@ export const PrimerInforme = () => {
                       </center>
                     </td>
                     <td><center>
-                    {mate.inf2 ? (
+                    {mate.mesal ? (
                         <>
                         
                           <img
@@ -108,7 +109,7 @@ export const PrimerInforme = () => {
                       ) : (
                         //2 Informe
                         // <h3>DICIEMBRE</h3>
-                       <FileUpload2Informe
+                       <FileUploadFinalLibre
                         tipo='proyecto'
                         rapida={mate.id_rapida}
                         anio={anio}
@@ -143,3 +144,12 @@ export const PrimerInforme = () => {
     </>
   );
 };
+// import React from 'react'
+
+// export const Mesa = () => {
+//   return (
+//     <div>
+//       <h1>Mesas</h1>
+//     </div>
+//   )
+// }

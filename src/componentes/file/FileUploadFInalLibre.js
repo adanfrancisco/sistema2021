@@ -21,7 +21,7 @@ console.log(desactiva)
     let extenxion = e.target.files[0].name.slice(
       ((e.target.files[0].name.lastIndexOf(".") - 1) >>> 0) + 2
     );
-    if (extenxion === "xls" || extension === "xlsx")  {
+    if (extenxion === "xls" || extenxion === "xlsx")  {
       // alert('correcto')
       setFile(e.target.files[0]);
       setFilename(e.target.files[0].name);
@@ -47,7 +47,7 @@ console.log(desactiva)
     data.append("file", file);
 
     // let url = varss.uriUpload + "analitico_upload.php";
-    let url = varss.uriUpload + "analitico_upload.php";
+    let url = varss.uriUpload + "amesal_upload.php";
     const options = {
       onUploadProgress: (progressEvent) => {
         const {loaded, total} = progressEvent;
@@ -82,7 +82,7 @@ console.log(desactiva)
           
           let url =
             varss.uri +
-            "profe_analitico.php?rapida=" +
+            "profe_amesa_l.php?rapida=" +
             props.rapida +
             "&an=" +
             props.anio +

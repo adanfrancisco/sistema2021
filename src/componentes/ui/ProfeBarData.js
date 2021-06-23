@@ -22,6 +22,13 @@ export const ProfeBarData =[
         icon: <MdIcons.MdSubject/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
 
+    },
+    {
+        title: 'MESAS',
+        path: '/mesa',
+        icon: <MdIcons.MdChat/>,
+        cName:'nav-link  btn btn-success btn-sm p-0 m-2'
+
     }
     
 

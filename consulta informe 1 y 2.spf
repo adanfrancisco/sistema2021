@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>aloeadan_is93</string>
+			<key>host</key>
+			<string>162.241.2.162</string>
+			<key>kcid</key>
+			<string>-9050611137418402695</string>
+			<key>name</key>
+			<string>is93</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>aloeadan_admin</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYoWE5TT2JqZWN0AAgAEQAaACQAKQAy
+			ADcASQBMAFEAUwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgA
+			nQC9AMIAzwDRANMA2ADjAOwA9wD6AQUBDgETASABIwAAAAAAAAIB
+			AAAAAAAAACkAAAAAAAAAAAAAAAAAAAEs
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1057, 434}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT profe_ainf1.rapida AS inf1, profe_ainf2.rapida AS inf2, carrera.carrera_nombre, curso.curso ,profesores.apellido, profesores.nombre, materia.id_materia, materia.materia_nombre, rapida.diasem , rapida.id_rapida  FROM rapida INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia INNER JOIN carrera ON rapida.carrera=carrera.id_carrera INNER JOIN curso ON rapida.curso = curso.idcurso LEFT JOIN profe_ainf1 ON rapida.id_rapida=profe_ainf1.rapida LEFT JOIN profe_ainf2 ON rapida.id_rapida=profe_ainf2.rapida WHERE rapida.profesor='17917901'</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT profe_ainf1.rapida AS inf1, profe_ainf2.rapida AS inf2, carrera.carrera_nombre, curso.curso ,profesores.apellido, profesores.nombre, materia.id_materia, materia.materia_nombre, rapida.diasem , rapida.id_rapida  FROM rapida INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia INNER JOIN carrera ON rapida.carrera=carrera.id_carrera INNER JOIN curso ON rapida.curso = curso.idcurso LEFT JOIN profe_ainf1 ON rapida.id_rapida=profe_ainf1.rapida LEFT JOIN profe_ainf2 ON rapida.id_rapida=profe_ainf2.rapida WHERE rapida.profesor='17917901'</string>
+		<string>SELECT profe_ainf1.rapida AS inf1, carrera.carrera_nombre, curso.curso ,profesores.apellido, profesores.nombre, materia.id_materia, materia.materia_nombre, rapida.diasem , rapida.id_rapida  FROM rapida INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia INNER JOIN carrera ON rapida.carrera=carrera.id_carrera INNER JOIN curso ON rapida.curso = curso.idcurso LEFT JOIN profe_ainf1 ON rapida.id_rapida=profe_ainf1.rapida WHERE rapida.profesor='17917901'</string>
+		<string>SELECT profe_ainf1.rapida AS inf1, carrera.carrera_nombre, curso.curso ,profesores.apellido, profesores.nombre, materia.id_materia, materia.materia_nombre, rapida.diasem , rapida.id_rapida  FROM rapida INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia INNER JOIN carrera ON rapida.carrera=carrera.id_carrera INNER JOIN curso ON rapida.curso = curso.idcurso LEFT JOIN profe_ainf1 ON rapida.id_rapida=profe_aainf1.rapida WHERE rapida.profesor='17917901'</string>
+		<string>SELECT profe_aproyecto.rapida AS proyecto, carrera.carrera_nombre, curso.curso ,profesores.apellido, profesores.nombre, materia.id_materia, materia.materia_nombre, rapida.diasem , rapida.id_rapida  FROM rapida INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia INNER JOIN carrera ON rapida.carrera=carrera.id_carrera INNER JOIN curso ON rapida.curso = curso.idcurso LEFT JOIN profe_aproyecto ON rapida.id_rapida=profe_aproyecto.rapida WHERE rapida.profesor='17917901'</string>
+		<string>"SELECT profe_aproyecto.rapida AS proyecto, carrera.carrera_nombre, curso.curso ,profesores.apellido, profesores.nombre, materia.id_materia, materia.materia_nombre, rapida.diasem , rapida.id_rapida  FROM rapida INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia INNER JOIN carrera ON rapida.carrera=carrera.id_carrera INNER JOIN curso ON rapida.curso = curso.idcurso LEFT JOIN profe_aproyecto ON rapida.id_rapida=profe_aproyecto.rapida WHERE rapida.profesor='17917901'</string>
+		<string>SELECT 
+profe_aproyecto.rapida AS proyecto,
+profe_ainf1.rapida AS inf1, 
+profe_ainf2.rapida AS inf2, 
+carrera.carrera_nombre, 
+curso.curso ,
+profesores.apellido, 
+profesores.nombre, 
+materia.id_materia, 
+materia.materia_nombre, 
+rapida.diasem , 
+rapida.id_rapida  
+FROM rapida 
+INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia 
+INNER JOIN carrera ON rapida.carrera=carrera.id_carrera 
+INNER JOIN curso ON rapida.curso = curso.idcurso 
+LEFT JOIN profe_aproyecto ON rapida.id_rapida=profe_aproyecto.rapida 
+LEFT JOIN profe_ainf1 ON rapida.id_rapida=profe_ainf1.rapida
+LEFT JOIN profe_ainf2 ON rapida.id_rapida=profe_ainf2.rapida
+WHERE rapida.profesor='17917901'</string>
+		<string>SELECT 
+profe_aproyecto.rapida AS proyecto,
+profe_ainf1.rapida AS inf1, 
+carrera.carrera_nombre, 
+curso.curso ,
+profesores.apellido, 
+profesores.nombre, 
+materia.id_materia, 
+materia.materia_nombre, 
+rapida.diasem , 
+rapida.id_rapida  
+FROM rapida 
+INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia 
+INNER JOIN carrera ON rapida.carrera=carrera.id_carrera 
+INNER JOIN curso ON rapida.curso = curso.idcurso 
+LEFT JOIN profe_aproyecto ON rapida.id_rapida=profe_aproyecto.rapida 
+LEFT JOIN profe_ainf1 ON rapida.id_rapida=profe_ainf1.rapida
+WHERE rapida.profesor='17917901'</string>
+		<string>SELECT 
+profe_aproyecto.rapida AS proyecto,
+profe_ainf1.rapida AS inf1, 
+carrera.carrera_nombre, 
+curso.curso ,
+profesores.apellido, 
+profesores.nombre, 
+materia.id_materia, 
+materia.materia_nombre, 
+rapida.diasem , 
+rapida.id_rapida  
+FROM rapida 
+INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia 
+INNER JOIN carrera ON rapida.carrera=carrera.id_carrera 
+INNER JOIN curso ON rapida.curso = curso.idcurso 
+LEFT JOIN profe_aproyecto ON rapida.id_rapida=profe_aproyecto.rapida 
+LEFT JOIN profe_ainf1 ON rapida.id_rapida_profe_ainf1.rapida
+WHERE rapida.profesor='17917901'</string>
+		<string>SELECT 
+profe_aproyecto.rapida AS proyecto, 
+carrera.carrera_nombre, 
+curso.curso ,
+profesores.apellido, 
+profesores.nombre, 
+materia.id_materia, 
+materia.materia_nombre, 
+rapida.diasem , 
+rapida.id_rapida  
+FROM rapida 
+INNER JOIN profesores ON profesores.dni = rapida.profesor
+INNER JOIN materia ON rapida.materia=materia.id_materia 
+INNER JOIN carrera ON rapida.carrera=carrera.id_carrera 
+INNER JOIN curso ON rapida.curso = curso.idcurso 
+LEFT JOIN profe_aproyecto ON rapida.id_rapida=profe_aproyecto.rapida 
+WHERE rapida.profesor='17917901'</string>
+		<string>CREATE TABLE profe_ainf2 LIKE profe_analitico</string>
+		<string>CREATE TABLE profe_ainf1 LIKE profe_analitico</string>
+		<string>CREATE TABLE ainf1 LIKE profe_analitico</string>
+		<string>CREATE TABLE ainf1 LIKE analitico</string>
+		<string>DELETE FROM profe_analitico WHERE rapida= '161'</string>
+		<string>DELETE * FROM profe_analitico WHERE rapida= '161'</string>
+		<string>DELETE FROM profe_analitico WHERE rapida= 161</string>
+		<string>SELECT id_rapida, carrera_nombre AS carrera, curso.curso,materia_nombre FROM rapida
+INNER JOIN carrera ON carrera.id_carrera = rapida.carrera
+INNER JOIN curso ON curso.idcurso = rapida.curso
+INNER JOIN materia ON materia.id_materia = rapida.materia
+ WHERE profesor =16777178</string>
+		<string>SELECT id_rapida, carrera_nombre AS carrera curso.curso,materia_nombre FROM rapida
+INNER JOIN carrera ON carrera.id_carrera = rapida.carrera
+INNER JOIN curso ON curso.idcurso = rapida.curso
+INNER JOIN materia ON materia.id_materia = rapida.materia
+ WHERE profesor =16777178</string>
+		<string>SELECT id_rapida, carrera_nombre AS carrera curso.curso,materia.materia_nombre FROM rapida
+INNER JOIN carrera ON carrera.id_carrera = rapida.carrera
+INNER JOIN curso ON curso.idcurso = rapida.curso
+INNER JOIN materia ON materia.id_materia = rapida.materia
+ WHERE profesor =16777178</string>
+		<string>SELECT id_rapida,curso.curso, carrera_nombre AS carrera FROM rapida
+INNER JOIN carrera ON carrera.id_carrera = rapida.carrera
+INNER JOIN curso ON curso.idcurso = rapida.curso
+INNER JOIN materia ON materia.id_materia = rapida.materia
+ WHERE profesor =16777178</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.21-21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
