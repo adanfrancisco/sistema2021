@@ -17,14 +17,14 @@ export const ProfeBarData =[
 
     },
     {
-        title: 'INFORMES',
+        title: 'AVANCE ACADEMICO',
         path: '/informes',
         icon: <MdIcons.MdSubject/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
 
     },
     {
-        title: 'MESAS',
+        title: 'MESAS DE EXAMEN',
         path: '/mesa',
         icon: <MdIcons.MdChat/>,
         cName:'nav-link  btn btn-success btn-sm p-0 m-2'
