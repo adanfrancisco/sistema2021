@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
- 
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "caniuse-lite": "^1.0.30001237",
     "crypto-js": "^4.0.0",
     "jquery": "^3.5.1",
+    "moment": "^2.29.1",
     "popper.js": "^1.16.1",
     "propper": "^1.0.3",
     "react": "^17.0.1",

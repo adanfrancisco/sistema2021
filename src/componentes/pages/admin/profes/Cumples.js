@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
@@ -21,7 +22,9 @@ export const Cumples = () => {
     }, [dispatch]);
 
     function mesActual(){
-        var meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+        var meses=['Enero','Febrero','Marzo','Abril','Mayo',
+        'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+
         var hoy = new Date()
         var mes = hoy.getMonth() 
         return meses[mes]
@@ -39,6 +42,8 @@ export const Cumples = () => {
     
         return edad;
     }
+// formateo de fecha
+
 
     
     return (
@@ -61,7 +66,10 @@ export const Cumples = () => {
                   {cumplex.map((cumple, index) => (
                     <tr key={cumple.dni}>
                         <td>{ cumple.apellido }</td>
-                        <td>{ cumple.mifecha }</td>
+                        <td>{ 
+                         
+                         moment(cumple.mifecha).format('D/MM/YYYY')
+                        }</td>
                         <td>{ 
                         calcularEdad( cumple.mifecha )
 
